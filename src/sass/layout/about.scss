@@ -1,0 +1,42 @@
+.about-container {
+  padding: 30px 50px 30px 100px;
+  background-color: $box-bg-color;
+  height: 435px;
+  display: flex;
+  gap: 30px;
+  overflow: visible;
+}
+
+.about__img-container-2 {
+  padding-top: 30px;
+}
+
+.about__img1 {
+  margin-bottom: 30px;
+}
+.about__text {
+  font-size: 16px;
+  font-weight: 300;
+  color: #000;
+}
+
+.about__img1 {
+  width: 270px;
+  height: 265px;
+}
+
+.about__img2 {
+  width: 270px;
+  height: 140px;
+}
+
+.about__img3 {
+  width: 270px;
+  height: 345px;
+}
+.about__btn-details {
+  @extend .hero__btn-details;
+  margin-top: 45px;
+  margin-bottom: 0;
+  position: static;
+}

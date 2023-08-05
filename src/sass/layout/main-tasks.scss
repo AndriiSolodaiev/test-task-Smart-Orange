@@ -1,0 +1,22 @@
+.main-tasks__list {
+  display: flex;
+  gap: 186px;
+}
+.main-tasks__item {
+  display: flex;
+  gap: 30px;
+}
+.main-tasks__descr {
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.64;
+}
+.main-tasks__img {
+  height: 140px;
+}
+
+.main-tasks__title {
+  @extend .section-title;
+  margin-bottom: 60px;
+}

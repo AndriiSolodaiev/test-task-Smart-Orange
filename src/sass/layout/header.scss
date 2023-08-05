@@ -1,0 +1,59 @@
+.header {
+  height: 102px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  width: 68.552px;
+  height: 41.527px;
+  margin-right: 330px;
+}
+.navigation-list {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  justify-content: center;
+}
+.navigation-list__link {
+  font-size: 12px;
+  text-transform: uppercase;
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 0.5px;
+    width: 100%;
+    top: -4px;
+    background-color: $primary-font-color;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    transition: transform 0.5s ease;
+  }
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -4px;
+    background-color: $primary-font-color;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    transition: transform 0.5s ease;
+  }
+  &:hover,
+  &:focus {
+    &::before {
+      transform: translateX(-50%) scaleX(1);
+    }
+    &::after {
+      transform: translateX(-50%) scaleX(1);
+    }
+  }
+}

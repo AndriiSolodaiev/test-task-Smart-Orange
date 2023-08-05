@@ -1,0 +1,85 @@
+.hero-section {
+  display: flex;
+  padding-top: 0;
+}
+
+.hero__left-part {
+  padding-top: 336px;
+  padding-right: 122px;
+}
+.hero__title {
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 300;
+  color: $secondory-font-color;
+  line-height: 1;
+  margin-bottom: 90px;
+  text-transform: uppercase;
+}
+.hero__title--second-word {
+  font-weight: 700;
+  color: $primary-font-color;
+}
+
+.hero__button-wrapper {
+  display: flex;
+  gap: 23px;
+  margin-bottom: 90px;
+}
+
+.hero__button-arrow {
+  width: 53px;
+  height: 53px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #f2f2f2;
+
+  &:hover,
+  &:focus {
+    background: #f9f9f9;
+  }
+  &:disabled {
+    opacity: 0.5;
+    &:hover,
+    &:focus {
+      background: $background-color;
+    }
+  }
+}
+
+.hero__right-part {
+  position: relative;
+}
+
+.hero__picture {
+  width: 770px;
+  height: 829px;
+}
+.hero__btn-details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 12px;
+  width: 222px;
+  height: 71px;
+  text-transform: uppercase;
+  background-color: $background-color;
+  transition: all $transition-props;
+  &:hover,
+  &:focus {
+    color: $hover-text-color;
+    background-color: $button-color;
+  }
+}
+.hero__pagination {
+  color: $secondory-font-color;
+  font-size: 24px;
+  font-weight: 400;
+}
+.hero__pagination--current {
+  margin-right: 25px;
+}
+.hero__pagination--all {
+  margin-left: 25px;
+}
