@@ -26,12 +26,13 @@ const variantsItems = {
     },
   },
 };
-export const Navigation = () => (
+export const Navigation = ({ toggle }) => (
   <motion.ul className="mobile-nav__list" variants={variants}>
     <motion.li
       variants={variantsItems}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
+      onClick={toggle}
     >
       <a href="#header" className="navigation-list__link">
         Головна
@@ -41,6 +42,7 @@ export const Navigation = () => (
       variants={variantsItems}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
+      onClick={toggle}
     >
       <a href="#hero" className="navigation-list__link">
         Галерея
@@ -50,15 +52,17 @@ export const Navigation = () => (
       variants={variantsItems}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
+      onClick={toggle}
     >
       <a href="#projects" className="navigation-list__link">
-        Проекти
+        Проєкти
       </a>
     </motion.li>
     <motion.li
       variants={variantsItems}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
+      onClick={toggle}
     >
       <a
         target="_blank"
@@ -73,6 +77,7 @@ export const Navigation = () => (
       variants={variantsItems}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
+      onClick={toggle}
     >
       <a href="#footer" className="navigation-list__link">
         Контакти
