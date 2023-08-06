@@ -1,17 +1,41 @@
 .header {
   height: 102px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: flex-end;
+  padding-left: 10px;
+  padding-right: 10px;
+  @media screen and (min-width: $breakpoint-desktop) {
+    justify-content: space-between;
+    padding-left: 135px;
+    padding-right: 135px;
+  }
 }
 .header-container {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  padding-left: 10px;
+  padding-right: 10px;
+  @media screen and (min-width: $breakpoint-desktop) {
+    justify-content: space-between;
+    padding-left: 135px;
+    padding-right: 135px;
+  }
+}
+.desktop-nav {
+  display: none;
+  @media screen and (min-width: $breakpoint-desktop) {
+    display: block;
+  }
 }
 .logo {
   width: 68.552px;
   height: 41.527px;
-  margin-right: 330px;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    margin-right: 330px;
+  }
 }
 .navigation-list {
   display: flex;
@@ -20,7 +44,8 @@
   justify-content: center;
 }
 .navigation-list__link {
-  font-size: 12px;
+  font-size: 24px;
+
   text-transform: uppercase;
   position: relative;
   &::before {
@@ -56,4 +81,66 @@
       transform: translateX(-50%) scaleX(1);
     }
   }
+  @media screen and (min-width: $breakpoint-desktop) {
+    font-size: 12px;
+  }
+}
+
+// MobileNnavigation
+.mobile-nav {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  @media screen and (min-width: $breakpoint-desktop) {
+    display: none;
+  }
+}
+.mobile-nav__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #9d9b9bc4;
+}
+.mobile-nav__list {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  padding: 25px;
+  position: absolute;
+  top: 100px;
+  width: 230px;
+}
+.mobile-nav__burger-btn {
+  outline: none;
+  border: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: pointer;
+  position: absolute;
+  top: 18px;
+  left: 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: transparent;
+}
+.refresh {
+  padding: 10px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }

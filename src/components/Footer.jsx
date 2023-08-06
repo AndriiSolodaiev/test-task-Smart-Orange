@@ -5,7 +5,7 @@ export const Footer = () => {
     <footer className=" section footer-container " id="footer">
       <div className="container footer__flex-container">
         <motion.img
-          initial={{ opacity: 0, x: -200 }}
+          initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.4, duration: 0.5 }}
           src={logo}
@@ -81,6 +81,7 @@ export const Footer = () => {
           initial={{ opacity: 0, x: 200 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.4, duration: 0.5 }}
+          className="footer__socials-wrap"
         >
           <h3 className="footer__block-title">Соціальні мережі</h3>
           <ul className="footer__socials-list">

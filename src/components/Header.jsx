@@ -1,10 +1,12 @@
 import logo from "../images/logo.png";
+import { MobileNavigation } from "./MobileNavigation";
+
 export const Header = () => {
   return (
     <header className="header" id="header">
-      <div className="container header-container">
+      <div className=" header-container">
         <img src={logo} alt="Logo" className="logo" />
-        <nav>
+        <nav className="desktop-nav">
           <ul className="navigation-list">
             <li>
               <a href="#header" className="navigation-list__link">
@@ -38,6 +40,7 @@ export const Header = () => {
             </li>
           </ul>
         </nav>
+        <MobileNavigation />
       </div>
     </header>
   );

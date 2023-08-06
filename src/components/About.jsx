@@ -34,6 +34,7 @@ export const About = () => {
           initial={{ opacity: 0, x: 200 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
+          className="about__text-wrapper"
         >
           <h2 className="section-title">Про компанію</h2>
           <p className="about__text">

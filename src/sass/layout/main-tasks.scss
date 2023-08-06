@@ -1,6 +1,11 @@
 .main-tasks__list {
   display: flex;
-  gap: 186px;
+  gap: 40px;
+  flex-direction: column;
+  @media screen and (min-width: $breakpoint-desktop) {
+    flex-direction: row;
+    gap: 186px;
+  }
 }
 .main-tasks__item {
   display: flex;

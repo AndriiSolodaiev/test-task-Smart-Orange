@@ -1,12 +1,21 @@
 .form__container {
   display: flex;
   gap: 30px;
+  position: relative;
 }
-
+.contact-form-section {
+  @media screen and (min-width: $breakpoint-tablet) and (max-width: 1439px) {
+    padding-bottom: 180px;
+  }
+}
 .form {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  @media screen and (min-width: $breakpoint-tablet) and (max-width: 1439px) {
+    position: absolute;
+    background-image: linear-gradient(to right, #fff 70%, transparent);
+  }
 }
 
 .form__label {
@@ -71,8 +80,14 @@
 }
 
 .form__img {
-  width: auto;
-  height: 369px;
+  display: none;
+  @media screen and (min-width: $breakpoint-tablet) {
+    display: block;
+  }
+  @media screen and (min-width: $breakpoint-desktop) {
+    width: auto;
+    height: 369px;
+  }
 }
 .form__policy {
   padding-left: 40px;

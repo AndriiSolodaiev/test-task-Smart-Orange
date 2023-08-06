@@ -1,14 +1,17 @@
 import img from "../images/contactForm.jpg";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { toast } from "react-toastify";
+const initialFormData = {
+  name: "",
+  phone: "",
+  email: "",
+  goods: "",
+  message: "",
+};
+
 export const ContactForm = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    goods: "",
-    message: "",
-  });
+  const [formData, setFormData] = useState(initialFormData);
   const container = {
     hidden: { opacity: 1, scale: 0 },
     visible: {
@@ -35,9 +38,11 @@ export const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
+    setFormData(initialFormData);
+    toast.success("Заявку відправлено! Дякуємо за звернення!");
   };
   return (
-    <section className="container section">
+    <section className="container section contact-form-section">
       <h2 className="section-title">Зв'яжіться з нами</h2>
       <div className="form__container ">
         <motion.form
@@ -116,14 +121,7 @@ export const ContactForm = () => {
           <p className="form__policy">
             Надсилаючи заявку Ви погоджуєтесь з політикою конфіденційності
           </p>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://github.com/AndriiSolodaiev/"
-            className="projects__all-btn"
-          >
-            Відправити &#8594;
-          </a>
+          <button className="projects__all-btn">Відправити &#8594;</button>
         </motion.form>
         <img
           src={img}

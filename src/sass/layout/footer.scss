@@ -10,6 +10,11 @@
 .footer__flex-container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  @media screen and (min-width: $breakpoint-tablet) {
+    gap: 0;
+  }
 }
 .footer__nav-list {
   display: flex;
@@ -37,7 +42,10 @@
 
 .contacts__link {
   position: relative;
-  max-width: 300px;
+  max-width: 160px;
+  @media screen and (min-width: $breakpoint-desktop) {
+    max-width: 300px;
+  }
 }
 .contacts__svg {
   position: absolute;
@@ -47,9 +55,18 @@
   left: -30px;
   fill: #fff;
 }
+.footer__socials-wrap {
+  order: -1;
+  @media screen and (min-width: $breakpoint-tablet) {
+    order: 4;
+  }
+}
 .footer__socials-list {
   display: flex;
-  gap: 40px;
+  gap: 20px;
+  @media screen and (min-width: $breakpoint-tablet) {
+    gap: 40px;
+  }
 }
 .socials__svg {
   width: 20px;

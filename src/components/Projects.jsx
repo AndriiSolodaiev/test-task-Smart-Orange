@@ -32,7 +32,7 @@ export const Projects = () => {
       >
         {projects.map(({ id, img, descr, link }) => (
           <motion.li key={id} variants={item} className="projects__item">
-            <img src={img} alt={`проєкт ${descr}`} />
+            <img src={img} alt={`проєкт ${descr}`} className="projects__img" />
 
             <a className="projects__item-hover" href={link}>
               <h3 className="item__title">{descr}</h3>

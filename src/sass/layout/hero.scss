@@ -1,11 +1,23 @@
 .hero-section {
   display: flex;
   padding-top: 0;
+  position: relative;
 }
 
 .hero__left-part {
-  padding-top: 336px;
-  padding-right: 122px;
+  position: absolute;
+  z-index: 20;
+  border-bottom-right-radius: 50%;
+  background-image: linear-gradient(to bottom, #ffffffb9, #ffffff7c);
+  @media screen and (min-width: $breakpoint-tablet) {
+    position: static;
+    padding-right: 40px;
+    border-bottom-right-radius: 0;
+  }
+  @media screen and (min-width: $breakpoint-desktop) {
+    padding-top: 336px;
+    padding-right: 122px;
+  }
 }
 .hero__title {
   font-size: 64px;
@@ -13,8 +25,11 @@
   font-weight: 300;
   color: $secondory-font-color;
   line-height: 1;
-  margin-bottom: 90px;
+  margin-bottom: 30px;
   text-transform: uppercase;
+  @media screen and (min-width: $breakpoint-tablet) {
+    margin-bottom: 90px;
+  }
 }
 .hero__title--second-word {
   font-weight: 700;
@@ -24,7 +39,10 @@
 .hero__button-wrapper {
   display: flex;
   gap: 23px;
-  margin-bottom: 90px;
+  margin-bottom: 10px;
+  @media screen and (min-width: $breakpoint-tablet) {
+    margin-bottom: 90px;
+  }
 }
 
 .hero__button-arrow {
@@ -34,27 +52,43 @@
   align-items: center;
   justify-content: center;
   border: 1px solid #f2f2f2;
+  background-color: #fffafa9c;
 
   &:hover,
   &:focus {
-    background: #f9f9f9;
+    background-color: #f9f9f9;
   }
   &:disabled {
     opacity: 0.5;
-    &:hover,
-    &:focus {
-      background: $background-color;
-    }
+
+    background: $background-color;
+  }
+  @media screen and (min-width: $breakpoint-tablet) {
+    background-color: transparent;
   }
 }
 
 .hero__right-part {
   position: relative;
+  width: 100%;
+  height: 460px;
+  @media screen and (min-width: $breakpoint-tablet) {
+  }
+  @media screen and (min-width: $breakpoint-desktop) {
+    width: 770px;
+    height: 829px;
+  }
 }
 
 .hero__picture {
-  width: 770px;
-  height: 829px;
+  width: 100%;
+  height: 460px;
+  @media screen and (min-width: $breakpoint-tablet) {
+  }
+  @media screen and (min-width: $breakpoint-desktop) {
+    width: 770px;
+    height: 829px;
+  }
 }
 .hero__btn-details {
   display: flex;
@@ -63,7 +97,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  font-size: 12px;
+  font-size: 20px;
   width: 222px;
   height: 71px;
   text-transform: uppercase;
@@ -74,11 +108,18 @@
     color: $hover-text-color;
     background-color: $button-color;
   }
+  @media screen and (min-width: $breakpoint-desktop) {
+    font-size: 12px;
+  }
 }
 .hero__pagination {
-  color: $secondory-font-color;
+  color: $primary-font-color;
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 500;
+  @media screen and (min-width: $breakpoint-tablet) {
+    font-weight: 400;
+    color: $secondory-font-color;
+  }
 }
 .hero__pagination--current {
   margin-right: 25px;

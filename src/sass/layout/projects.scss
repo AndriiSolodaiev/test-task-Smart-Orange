@@ -1,11 +1,27 @@
 .projects__container {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   gap: 30px;
   overflow: hidden;
   margin-bottom: 30px;
+  @media screen and (min-width: $breakpoint-tablet) {
+    flex-direction: row;
+  }
 }
-
+.projects__img {
+  width: 100%;
+  max-height: 200px;
+  @media screen and (min-width: $breakpoint-tablet) {
+    max-width: 339px;
+    max-height: fit-content;
+  }
+  @media screen and (min-width: $breakpoint-desktop) {
+    width: auto;
+    max-width: fit-content;
+    max-height: fit-content;
+  }
+}
 .projects__item-hover {
   visibility: hidden;
   pointer-events: none;
@@ -25,6 +41,7 @@
 }
 .projects__item {
   position: relative;
+  box-sizing: border-box;
   &:hover .projects__item-hover,
   &:focus .projects__item-hover {
     visibility: visible;
@@ -35,11 +52,14 @@
 }
 
 .item__title {
-  font-size: 64px;
+  font-size: 20px;
   line-height: 1;
   font-weight: 700;
   color: $hover-text-color;
   margin-bottom: 15px;
+  @media screen and (min-width: $breakpoint-desktop) {
+    font-size: 64px;
+  }
 }
 .item__details {
   color: #ffffff8a;
@@ -53,7 +73,7 @@
 .projects__all-btn {
   width: 222px;
   height: 71px;
-  font-size: 12px;
+  font-size: 20px;
   font-weight: 400;
   color: $hover-text-color;
   background-color: $button-color;
@@ -66,6 +86,9 @@
   &:focus {
     color: $button-color;
     background-color: #f3f3f3;
+  }
+  @media screen and (min-width: $breakpoint-desktop) {
+    font-size: 12px;
   }
 }
 .project__btn-wapper {
